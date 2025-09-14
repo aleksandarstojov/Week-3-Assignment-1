@@ -25,5 +25,25 @@ df['species'] = iris.target_names[iris.target]
 
 sw = df['sepal width (cm)']
 
-plt.hist(sw, edgecolor='white')
-plt.show()
+# plt.hist(sw, edgecolor='white')
+# plt.show()
+
+#Based on the histogram from #1a, which would you expect to be higher, 
+#the mean or the median? Why?
+
+#answer: I would say they are really close, with median being just slightly larger
+
+# print(sw.mean())
+# print(sw.median())
+
+#answer: 
+# 3.057337
+# 3.0
+
+# Only 27% of the flowers have a Sepal.Width higher than ________ cm.
+
+twenty_seven = sw.quantile(0.73)
+
+# print(f"Only 27% of the flowers have a sepal width higher than {twenty_seven} cm")
+
+print(df)
