@@ -46,4 +46,19 @@ twenty_seven = sw.quantile(0.73)
 
 # print(f"Only 27% of the flowers have a sepal width higher than {twenty_seven} cm")
 
+# Make scatterplots of each pair of the numerical variables in iris (There should be 6 pairs/plots).
+
+sns.pairplot(df, hue='species', diag_kind='hist')
+
+plt.show()
+
+del df['species']
+
 print(df)
+
+print(df.corr())
+
+# Based on #1e, which two variables appear to have the strongest relationship? 
+# petal width and petal length
+# And which two appear to have the weakest relationship?
+# sepal length and sepal width
